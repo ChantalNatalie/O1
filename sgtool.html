@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sensory Questionnaire</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <nav class="navbar">
+    <div class="container">
+      <h1>Sensory Questionnaire</h1>
+    </div>
+  </nav>
+  <div class="container">
+    <div id="disclaimerContainer">
+      <h2>Disclaimer</h2>
+      <p>This questionnaire is a sensory guidance tool designed to assess sensory stimulation preferences.</p>
+<p>There are 55 questions in total and the results will show you the areas that the person is under-stimulated and over-stimulated.</p>
+      <p>This tool should not be used to treat or diagnose.</p>
+      <button id="disclaimerNextButton">Next</button>
+    </div>
+    <div id="questionContainer" class="section" style="display: none;">
+      <h2 id="question">Question: </h2>
+      <div class="radio-buttons">
+        <label class="yes">
+          <input type="radio" name="answer" value="Yes"> Yes
+        </label>
+        <label class="no">
+          <input type="radio" name="answer" value="No"> No
+        </label>
+      </div>
+      <button id="nextButton">Next</button>
+    </div>
+    <div id="resultContainer" style="display: none;">
+      <h2>Results</h2>
+      <div class="tables-container">
+        <table id="table1">
+          <thead>
+            <tr>
+              <th>Descriptions: (U) Under Sensitive, (O) Over Sensitive</th>
+              <th>Number of ‘yes’</th>
+            </tr>
+          </thead>
+          <!-- Table 1 content will be dynamically generated -->
+        </table>
+        <table id="table2">
+          <thead>
+            <tr>
+              <th>Under and Over Sensitivity</th>
+              <th>U</th>
+              <th>O</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Visual (Sight)</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Auditory (Sound)</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Tactile (Touch)</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Taste and Smell</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Interoception (Inside Body)</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Proprioception (Body Awareness)</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Vestibular (Movement/Balance)</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="chart-container">
+        <canvas id="lineChart"></canvas>
+        <p id="interpretation"></p>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+ 
+</body>
+</html>
+
